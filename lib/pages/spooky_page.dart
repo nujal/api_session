@@ -28,6 +28,7 @@ class _SpookyPageState extends State<SpookyPage> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[400],
@@ -35,7 +36,7 @@ class _SpookyPageState extends State<SpookyPage> {
         backgroundColor: Colors.purple[900],
 
         // automaticallyImplyLeading: false,
-        title: Text('Spooky jokes'),
+        title: const Text('Spooky jokes'),
         centerTitle: true,
       ),
       body: !isloaded
@@ -47,13 +48,13 @@ class _SpookyPageState extends State<SpookyPage> {
                 children: [
                   Text(spooky!.setup.toString(),
                       maxLines: 2,
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                  SizedBox(
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
+                  const SizedBox(
                     height: 5.0,
                   ),
                   Text(spooky!.delivery.toString(),
                       maxLines: 2,
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
                 ],
               ),
             ),

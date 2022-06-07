@@ -26,14 +26,14 @@ class MusicJokeModel {
     type = json['type'];
     setup = json['setup'] ?? '';
     delivery = json['delivery'] ?? json["joke"];
-    flags = json['flags'] != null ? new Flags.fromJson(json['flags']) : null;
+    flags = json['flags'] != null ? Flags.fromJson(json['flags']) : null;
     id = json['id'];
     safe = json['safe'];
     lang = json['lang'];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['error'] = error;
     data['category'] = category;
     data['type'] = type;
@@ -75,7 +75,7 @@ class Flags {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['nsfw'] = nsfw;
     data['religious'] = religious;
     data['political'] = political;

@@ -27,6 +27,7 @@ class _PunPageState extends State<PunPage> {
     super.didChangeDependencies();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[400],
@@ -34,7 +35,7 @@ class _PunPageState extends State<PunPage> {
         backgroundColor: Colors.purple[900],
 
         // automaticallyImplyLeading: false,
-        title: Text('Puns'),
+        title: const Text('Puns'),
         centerTitle: true,
       ),
       body: !isloaded
@@ -46,13 +47,13 @@ class _PunPageState extends State<PunPage> {
                 children: [
                   Text(pun!.setup.toString(),
                       maxLines: 2,
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                  SizedBox(
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
+                  const SizedBox(
                     height: 5.0,
                   ),
                   Text(pun!.delivery.toString(),
                       maxLines: 2,
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
                 ],
               ),
             ),

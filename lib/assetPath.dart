@@ -1,5 +1,3 @@
-import 'package:flutter/widgets.dart';
-
 class AssetPath {
   static const String programming = "assets/images/programming.jpeg";
   static const String musically = "assets/images/music.jpeg";

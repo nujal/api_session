@@ -34,7 +34,7 @@ class _ProgramPageState extends State<ProgramPage> {
       appBar: AppBar(
         backgroundColor: Colors.purple[900],
         // automaticallyImplyLeading: false,
-        title: Text('Programming joke'),
+        title: const Text('Programming joke'),
         centerTitle: true,
       ),
       body: !isLoaded
@@ -46,13 +46,13 @@ class _ProgramPageState extends State<ProgramPage> {
                 children: [
                   Text(model!.setup.toString(),
                       maxLines: 2,
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                  SizedBox(
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
+                  const SizedBox(
                     height: 5.0,
                   ),
                   Text(model!.delivery.toString(),
                       maxLines: 2,
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
                 ],
               ),
             ),

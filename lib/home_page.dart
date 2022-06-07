@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jokes_api/assetPath.dart';
+import 'package:jokes_api/drawer.dart';
 import 'package:jokes_api/pages/music_page.dart';
 import 'package:jokes_api/pages/program_page.dart';
 import 'package:jokes_api/pages/models/pages_model.dart';
@@ -40,19 +41,21 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: DrawerWidget(),
+      // drawer: const Drawer(),
+
       backgroundColor: Colors.grey[400],
       appBar: AppBar(
         // automaticallyImplyLeading: false,
-        title: Text('Jokes API'),
+        title: const Text('Jokes API'),
         centerTitle: true,
         backgroundColor: Colors.purple[900],
       ),
       body: Container(
-        padding: EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(12.0),
         child: GridView.builder(
           itemCount: pages.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             mainAxisSpacing: 6.0,
             crossAxisSpacing: 12.0,
@@ -69,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                 },
                 child: Container(
                     color: Colors.grey[200],
-                    padding: EdgeInsets.all(18),
+                    padding: const EdgeInsets.all(18),
                     child: Column(
                       children: [
                         Image.asset(

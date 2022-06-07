@@ -27,13 +27,14 @@ class _MusicPageState extends State<MusicPage> {
     super.didChangeDependencies();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[400],
       appBar: AppBar(
         backgroundColor: Colors.purple[900],
         // automaticallyImplyLeading: false,
-        title: Text('Music Joke'),
+        title: const Text('Music Joke'),
         centerTitle: true,
       ),
       body: !isLoaded
@@ -46,17 +47,17 @@ class _MusicPageState extends State<MusicPage> {
                   Text(
                     music!.setup.toString(),
                     maxLines: 2,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5.0,
                   ),
                   Text(
                     music!.delivery.toString(),
                     maxLines: 2,
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
